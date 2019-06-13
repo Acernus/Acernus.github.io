@@ -47,7 +47,7 @@
 
   
   
-  <link href="/assets/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css" />
 
 
 
@@ -78,7 +78,7 @@
 
 
 
-<link href="/assets/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 
 <link href="/assets/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
@@ -436,7 +436,18 @@
 
 <h1 id="为什么要使用缓存">为什么要使用缓存</h1>
 
-<p>当前的 web 系统中都会用到数据库</p>
+<p>当前的 web 中依赖的大多数数据都来源于数据库或者计算后的相关数据，为了减少数据库的 IO 操作以及计算开销，我们可以采用 Redis，Memcached 等 key-value 数据库缓存相关结果，因为数据是直接在内存中存储，相比于磁盘的 IO 来说提升是巨大的，因此可以获得更快的响应。</p>
+
+<h1 id="缓存出现的问题">缓存出现的问题</h1>
+
+<p>引入缓存机制增加了系统的复杂度，有可能会造成数据不一致的情况，这也是分布式系统面临的通用问题，同时这也决定了缓存的应用场景对实时性要求不高。</p>
+
+<h2 id="数据不一致">数据不一致</h2>
+
+<p>在常见的并发量较大的系统中，在维护数据库和缓存的数据库，很容易造成数据不一致的情况。</p>
+
+<h1 id="缓存更新策略">缓存更新策略</h1>
+
 
 
       
@@ -445,6 +456,11 @@
     <div>
       
         
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/assets/images/wechat-subscriber.jpg" alt="亦然 wechat" style="width: 200px; max-width: 100%;"/>
+    <div>技术漫漫谈，期待您的关注</div>
+</div>
+
 
       
     </div>
@@ -665,7 +681,7 @@ MathJax.Hub.Config({
             
               <div class="post-toc-content">
     <ol class=nav>
-      <li class="nav-item nav-level-1"> <a class="nav-link" href="#为什么要使用缓存"> <span class="nav-number">1</span> <span class="nav-text">为什么要使用缓存</span> </a> </li>
+      <li class="nav-item nav-level-1"> <a class="nav-link" href="#为什么要使用缓存"> <span class="nav-number">1</span> <span class="nav-text">为什么要使用缓存</span> </a> </li> <li class="nav-item nav-level-1"> <a class="nav-link" href="#缓存出现的问题"> <span class="nav-number">2</span> <span class="nav-text">缓存出现的问题</span> </a> <ol class="nav-child"> <li class="nav-item nav-level-2"> <a class="nav-link" href="#数据不一致"> <span class="nav-number">2.1</span> <span class="nav-text">数据不一致</span> </a> </li> </ol> </li> <li class="nav-item nav-level-1"> <a class="nav-link" href="#缓存更新策略"> <span class="nav-number">3</span> <span class="nav-text">缓存更新策略</span> </a> </li>
     </ol>
   </div>
             
@@ -760,42 +776,42 @@ MathJax.Hub.Config({
   
   
   
-  <script type="text/javascript" src="/assets/lib/jquery/index.js?v=2.1.3"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
 
   
   
   
   
   
-  <script type="text/javascript" src="/assets/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/fastclick/1.0.6/fastclick.min.js"></script>
 
   
   
   
   
   
-  <script type="text/javascript" src="/assets/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazyload/1.9.3/jquery.lazyload.min.js"></script>
 
   
   
   
   
   
-  <script type="text/javascript" src="/assets/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
 
   
   
   
   
   
-  <script type="text/javascript" src="/assets/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.ui.min.js"></script>
 
   
   
   
   
   
-  <script type="text/javascript" src="/assets/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
 
 
   
